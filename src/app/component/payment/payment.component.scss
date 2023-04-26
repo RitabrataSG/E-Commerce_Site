@@ -1,0 +1,17 @@
+.payment {
+    height: 40vh;
+    margin: 25px;
+    padding: 25px;
+    border-width: 50px;
+    text-align: center;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // text-align: center;
+}
+
+

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="payment">
+        <h4 class="payment-title"> Payment </h4>
+    </div>
+    <br>
+    <div class="center">
+        <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Payment Successful !</strong> Continue with more shopping.
+            <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <form [formGroup]="addResto" (ngSubmit)="collectResto()">
+            <div class="form-group">
+                <label> Email -</label>
+                <input type="text" class="form-control" placeholder="Enter Email" formControlName="email">
+            </div>
+            <div class="form-group">
+                <label> CardNo -</label>
+                <input type="text" class="form-control" placeholder="Enter CardNo" formControlName="CardNo">
+            </div>
+            <div class="form-group">
+                <label> Date -</label>
+                <input type="text" class="form-control" placeholder="Enter Valid Date" formControlName="Date">
+            </div>
+            <div class="form-group">
+                <label> CSV -</label>
+                <input type="text" class="form-control" placeholder="Enter CSV" formControlName="CSV">
+            </div>
+
+            <br>
+            <button type="Pay" class="btn btn-success"> Payment</button>
+        </form>
+    </div>
+</div>
